@@ -1,0 +1,82 @@
+/* Add this CSS to your existing styles */
+.form-container {
+  display:block;
+  justify-content:left;
+  align-items: center;
+  padding-left:100px;
+  height: 100%;
+  background-image: url("https://t4.ftcdn.net/jpg/05/04/69/19/240_F_504691993_ScrJx98EDBQECBCIXAHLFgTd8w0TxX7F.jpg");
+  background-size: contain;
+  background-position: 10%;
+}
+
+.form {
+  width: 400px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.form h1 {
+  text-align: center;
+}
+
+.cta {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #7700ff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #6600cc;
+}
+
+.results {
+  margin-top: 50px;
+}
+
+.results strong {
+  display: block;
+  font-weight: bold;
+}
+
+.results span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.snackbar {
+  background-color: #333;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+label input,
+label textarea {
+  display: block;
+  width: calc(100% - 40px);
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label .error {
+  background: #ffeeee;
+  padding: 0.5em;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <h3 class="news-header">Health News</h3>
+    <div class="row">
+      <div *ngFor="let data of healthNewsDisplay" class="col-lg-3">
+        <div class="box" [ngClass]="{ 'no-image': !data.urlToImage }">
+          <img *ngIf="data.urlToImage" src="{{data.urlToImage}}" alt="News Image" />
+          <div *ngIf="!data.urlToImage" class="no-image-text">Image not available</div>
+          <hr>
+          <h5 class="mt-2 mb-2">{{data.title}}</h5>
+          <a href="{{data.url}}" target="_blank" class="btn btn-dark btn-sm mt-2">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>

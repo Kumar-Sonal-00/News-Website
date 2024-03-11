@@ -1,0 +1,43 @@
+<div class="form-container">
+        <div class="form">
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <h1>Contact us</h1>
+      <label>
+        Name:
+        <input type="text" formControlName="name" />
+        <div *ngIf="submitted && messageForm.get('name')?.hasError('required')" class="error">
+          Your name is required
+        </div>
+      </label>
+
+      <label>
+        Email:
+        <input type="email" formControlName="email" />
+        <div *ngIf="submitted && messageForm.get('email')?.hasError('required')" class="error">
+          Your email is required
+        </div>
+      </label>
+
+      <label>
+        Message:
+        <textarea formControlName="message"></textarea>
+        <div *ngIf="submitted && messageForm.get('message')?.hasError('required')" class="error">
+          A message is required
+        </div>
+      </label>
+    
+      <input type="submit" value="Send message" class="cta" />
+    </form>
+    
+    <div *ngIf="submitted" class="results">
+      <strong>Name:</strong>
+      <span>{{ messageForm.controls["name"].value }}</span>
+
+      <strong>Email:</strong>
+      <span>{{ messageForm.controls["email"].value }}</span>
+    
+      <strong>Message:</strong>
+      <span>{{ messageForm.controls["message"].value }}</span>
+    </div>
+</div>
+</div>
