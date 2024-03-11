@@ -1,27 +1,33 @@
-# Newswebsite
+# News Website Angular Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+This Angular project is designed to fetch and display news content from various categories using the NewsAPI service. Below are the commands used for setting up and managing this project:
 
-## Development server
+## Commands
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. `ng new newswebsite`: To create a new Angular project called newswebsite.
+2. `ng g c componentname`: To create a component.
+3. `ng g s servicename`: To create a service.
+4. `ng add @angular/material`: To add Angular Material.
+5. `ng add @ng-bootstrap/ng-bootstrap`: For integrating Bootstrap.
+6. `ng serve --o`: To run the application.
 
-## Code scaffolding
+## Components
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Top Heading Component:** Displays the latest breaking news headlines and top stories.
+2. **Business News Component:** Fetches and displays breaking business news.
+3. **Entertainment News Component:** Fetches and displays entertainment news updates.
+4. **Health News Component:** Fetches and displays health-related news articles.
+5. **Science News Component:** Fetches and displays science-related news and advancements.
+6. **Sports News Component:** Fetches and displays sports news updates and event details.
+7. **Tech News Component:** Fetches and displays technology-related news and developments.
+8. **Contact Component:** Provides a form for users to submit inquiries or feedback, utilizing Angular's built-in validators for form validation and sending data to a backend server via the `NewsAPIService`.
 
-## Build
+## Service
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **NewsAPI Service:** Handles HTTP requests to the NewsAPI, providing methods for fetching news content across different categories. It abstracts away HTTP communication details and offers a clean interface for components to retrieve news data.
 
-## Running unit tests
+## Video Demonstration
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Watch the project in action through this [video demonstration](https://drive.google.com/drive/folders/1ZGaQCZJgw1d19TZxENIIpWKf_jq56Ncc?usp=sharing).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This detailed overview provides insights into each component's purpose and how they interact with the NewsAPI service to fetch and display news content. The project aims to offer users easy access to news from various categories and enables them to reach out with inquiries or feedback via the contact form.
