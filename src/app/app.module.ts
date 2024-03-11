@@ -20,13 +20,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
-import {
-  GoogleLoginProvider,
-  SocialAuthServiceConfig,
-  SocialLoginModule,
-} from 'angularx-social-login';
 
-import { NewsapiService } from './Service/newsapi.service';
 
 @NgModule({
   declarations: [
@@ -51,18 +45,6 @@ import { NewsapiService } from './Service/newsapi.service';
     MatSnackBarModule
   ],
   providers: [
-    NewsapiService,{
-      provide:'SocialAuthServiceConfig',
-      useValue:{
-        autoLogin:false,
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('google-client-id'),
-          },
-        ],
-      } as SocialAuthServiceConfig,
-    },
   ],
   bootstrap: [AppComponent]
 })
